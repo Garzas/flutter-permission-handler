@@ -221,13 +221,14 @@ public class PermissionHandlerPlugin implements MethodCallHandler {
         break;
       }
       case "requestPermissions":
-        if (mResult != null) {
-          result.error(
-              "ERROR_ALREADY_REQUESTING_PERMISSIONS",
-              "A request for permissions is already running, please wait for it to finish before doing another request (note that you can request multiple permissions at the same time).",
-              null);
-          return;
-        }
+          //TODO temporary disabled
+//        if (mResult != null) {
+//          result.error(
+//              "ERROR_ALREADY_REQUESTING_PERMISSIONS",
+//              "A request for permissions is already running, please wait for it to finish before doing another request (note that you can request multiple permissions at the same time).",
+//              null);
+//          return;
+//        }
 
         mResult = result;
         final List<Integer> permissions = call.arguments();
