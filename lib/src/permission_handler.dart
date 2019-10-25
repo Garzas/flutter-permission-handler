@@ -82,7 +82,7 @@ class PermissionHandler {
       List<PermissionGroup> permissions) async {
     final List<int> data = Codec.encodePermissionGroups(permissions);
     final Map<dynamic, dynamic> status =
-        await _methodChannel.invokeMethod('requestPermissions', data);
+        await _methodChannel.invokeMethod('ph_requestPermissions', data);
 
     return Codec.decodePermissionRequestResult(Map<int, int>.from(status));
   }

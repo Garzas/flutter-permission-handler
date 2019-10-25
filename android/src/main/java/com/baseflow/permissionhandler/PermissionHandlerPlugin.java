@@ -220,7 +220,7 @@ public class PermissionHandlerPlugin implements MethodCallHandler {
         result.success(serviceStatus);
         break;
       }
-      case "requestPermissions":
+      case "ph_requestPermissions":
           //TODO temporary disabled
 //        if (mResult != null) {
 //          result.error(
